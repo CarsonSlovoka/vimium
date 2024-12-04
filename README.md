@@ -9,7 +9,7 @@ spirit of the Vim editor.
 * Edge: [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/vimium/djmieaghokpkpjfbpelnlkfgfjapaopa)
 * Firefox: [Firefox Add-ons](https://addons.mozilla.org/en-GB/firefox/addon/vimium-ff/)
 
-To install from source, see [here](CONTRIBUTING.md#installing-from-source).
+To install from source, see [here](CONTRIBUTING.md#installing-from-source) or [install.sh](install.sh).
 
 Vimium's Options page can be reached via a link on the help dialog (type `?`) or via the button next
 to Vimium on the extension pages of Chrome and Edge (`chrome://extensions`), or Firefox
