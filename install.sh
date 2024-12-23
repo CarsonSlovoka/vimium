@@ -1,17 +1,22 @@
 # bash install.sh firefox
 # bash install.sh chrome
 
+script_dir=$(dirname "$(readlink -f "$0")")
+
 install_on_chrome() {
-  cp manifest_chrome.json manifest.json
-  google-chrome chrome://extensions/
-  yad --info --text="ctrl+L and input: chrome://extensions/"
-  yad --info --text="指派vimium的目錄給它即可"
+  cp "$script_dir/manifest_chrome.json" "$script_dir/manifest.json"
+  swaymsg exec google-chrome chrome://extensions/
+  notify-send "" "ctrl+L and input: chrome://extensions/"
+  notify-send "" "指派vimium的目錄給它即可"
+  # yad --info --text="ctrl+L and input: chrome://extensions/"
+  # yad --info --text="指派vimium的目錄給它即可"
 }
 
 install_on_filefox() {
-  cp manifest_firefox.json manifest.json
-  firefox about:debugging#/runtime/this-firefox
-  yad --info --text="將manifest.json的路徑餵入即可"
+  cp "$script_dir/manifest_firefox.json" "$script_dir/manifest.json"
+  swaymsg exec firefox about:debugging#/runtime/this-firefox
+  notify-send "" "將manifest.json的路徑餵入即可"
+  # yad --info --text="將manifest.json的路徑餵入即可"
 }
 
 case "$1" in
